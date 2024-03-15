@@ -1,5 +1,7 @@
 import ArtechTeam from './assets/img-Proyectos/Artech-Team.png'
 import ComidaSegura from './assets/img-Proyectos/img-LandPageComidaSegura.png'
+import WaramTeam from './assets/img-Proyectos/Waram-Team.jpg'
+import VDS from './assets/img-Proyectos/Visual-Reporte.png'
 import Tegnonet from './assets/icons-Tegnologias/icon-.net.svg'
 import Tegnoc from './assets/icons-Tegnologias/icon-c.svg'
 import Tegnocss from './assets/icons-Tegnologias/icon-css.svg'
@@ -10,8 +12,6 @@ import Tegnonode from './assets/icons-Tegnologias/icon-nodejs.svg'
 import Tegnoreact from './assets/icons-Tegnologias/icon-react.svg'
 import Tegnotailwind from './assets/icons-Tegnologias/icon-tailwind.svg'
 import Tegnovite from './assets/icons-Tegnologias/icon-vite.svg'
-import VSDDetail from './assets/img-Proyectos/img_VSD.png'
-
 
 export default function Proyecto() {
 
@@ -19,7 +19,7 @@ export default function Proyecto() {
         {
             titulo: "Comida Segura",
             subTitulo: "Buscador Web para personas con necesidades alimenticias diferentes",
-            Descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, soluta voluptatibus. Enim dignissimos culpa ea reprehenderit minus expedita neque consequuntur earum quas? Excepturi autem voluptate minus cumque reiciendis officia culpa!",
+            Descripcion: "Participé en un equipo que desarrolló un buscador de comida para personas con dietas especiales. Utilizando una base de datos global, nuestra aplicación permite a los usuarios filtrar opciones de comida de manera personalizada según sus necesidades dietéticas únicas.",
             imgAd: ArtechTeam,
             imgPrincipal: ComidaSegura,
             Tegnos: [
@@ -32,24 +32,24 @@ export default function Proyecto() {
         },
         {
             titulo: "Visualizador de Datos",
-            subTitulo: "Interfaz para usuarios donde se puede consultar data de una base de datos sql usando asp .net",
-            Descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, soluta voluptatibus. Enim dignissimos culpa ea reprehenderit minus expedita neque consequuntur earum quas? Excepturi autem voluptate minus cumque reiciendis officia culpa!",
-            imgAd: null,
-            imgPrincipal: "",
+            subTitulo: "Interfaz para usuarios donde se puede consultar data de una base de datos sql usando Nodejs y Typescript",
+            Descripcion: "Como parte de un equipo colaborativo, contribuí al desarrollo de una interfaz de usuario que permite a los usuarios consultar datos de una base de datos SQL de manera eficiente.",
+            imgAd: WaramTeam,
+            imgPrincipal: VDS,
             Tegnos: [
                 Tegnoc,
-                Tegnosql,
                 Tegnotailwind,
                 Tegnoreact,
-                Tegnonet
+                Tegnonet,
+                Tegnosql
             ]
 
         },
         {
-            titulo: "Land Page Autoservico RM",
-            subTitulo: "Land Page de Maximercado Local totalmente para el cliente",
-            Descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, soluta voluptatibus. Enim dignissimos culpa ea reprehenderit minus expedita neque consequuntur earum quas? Excepturi autem voluptate minus cumque reiciendis officia culpa!",
-            imgAd: "",
+            titulo: "Waram StartUp LandingPage",
+            subTitulo: "Land Page para Startup de servicios it",
+            Descripcion: "Participé en la creación de una Landing Page para una startup de servicios IT con un estilo creativo y moderno. Nuestro objetivo fue diseñar una página web impactante y funcional que reflejara la innovación y el enfoque revolucionario de la empresa.",
+            imgAd: WaramTeam,
             imgPrincipal: "",
             Tegnos: [
                 Tegnoreact,
@@ -72,9 +72,9 @@ export default function Proyecto() {
             <div className='flex flex-wrap gap-20 justify-center'>
 
                 {TRabajos.map((data, index) => (
-                    <article className='grid grid-rows-[30%_40%_25%] grid-cols-3 gap-5 px-5 pt-5 max-w-[500px] h-[1000px] rounded-lg border-2 border-primarioC telf:h-[720px]'>
+                    <article key={index} className='grid grid-rows-[30%_40%_25%] grid-cols-3 gap-5 px-5 pt-5 max-w-[500px] h-[1200px] telf:h-[790px]'>
                         <img src={data.imgPrincipal} alt=""
-                            className='row-start-1 row-span-1 col-start-1 col-span-3 h-full object-cover self-center justify-self-center' />
+                            className='row-start-1 row-span-1 col-start-1 col-span-3 h-full object-cover self-center justify-self-center border-2 border-primarioD rounded-lg' />
                         <div className='row-start-2 row-span-1 col-start-1 col-span-3 flex flex-col gap-5 h-fit items-center mb-5'>
                             <p className='text-white text-6xl text-center font-title'> {data.titulo} </p>
                             <p className='text-white text-xl font-text text-center w-[80%]'> {data.subTitulo} </p>
@@ -82,7 +82,7 @@ export default function Proyecto() {
                         </div>
                         <img src={data.imgAd} alt=""
                             className='row-start-3 row-span-1 col-start-2 col-span-2 self-end justify-self-end w-full' />
-                        <div className='flex justify-center w-[95%] row-start-3 row-span-1 col-start-1 col-span-2 self-end bg-slate-800 rounded-lg m-5'>
+                        <div className='flex justify-between w-full row-start-3 row-span-1 col-start-1 col-span-2 self-end bg-slate-800 rounded-lg m-5'>
                             {data.Tegnos.map((tegno, index) => (
                                 <img key={index} src={tegno} alt=""
                                     className='w-[20%]' />

@@ -6,6 +6,7 @@ import imgPescar2 from './assets/img-Trayectoria/Pescar-Grupal.jpeg'
 import imgPescar3 from './assets/img-Trayectoria/Personal-Pescar.png'
 import imgSAP1 from './assets/img-Trayectoria/SAP-clase.jpg'
 import imgSAP2 from './assets/img-Trayectoria/SAP-Grupal.jpg'
+import imgSAP3 from './assets/img-Trayectoria/SAP-Detalle.jpg'
 import GradienteCeleste from './assets/img-Trayectoria/Gradient-Celeste.png'
 import GradienteVioleta from './assets/img-Trayectoria/Gradient-Violeta.png'
 import GradienteNaranja from './assets/img-Trayectoria/Gradient-Naranja.png'
@@ -16,10 +17,7 @@ export default function Trayecto() {
     const Momentos = [
         {
             Titulo: "Artech Capacitacion .Net y SQL",
-            subTitulo: "6 mese de estduio",
-            TExto1: "Lorem, ipsum dolor sit amet consectetur adipisicing elit Ducimus exercitationem deserunt ",
-            texto2: "Lorem, ipsum dolor sit amet consectetur adipisicing elit Ducimus exercitationem deserunt ",
-            texto3: "Lorem, ipsum dolor sit amet consectetur adipisicing elit Ducimus exercitationem deserunt ",
+            texto1: "Durante mi capacitación de 6 meses en la consultora de software Artech, me sumergí en un entorno colaborativo de toma de decisiones en tiempo real y constante intercambio de ideas. Mi enfoque se centró en tecnologías .NET para la creación de APIs seguras y eficientes, así como en la comprensión de diversas arquitecturas y prácticas recomendadas asociadas.",
             img1: imgArtech1,
             img2: imgArtech2,
             img3: imgArtech3,
@@ -27,10 +25,7 @@ export default function Trayecto() {
         },
         {
             Titulo: "Fundacion Pescar Capacitacion para el Trabajo",
-            subTitulo: "6 mese de estudio",
-            TExto1: "Lorem, ipsum dolor sit amet consectetur adipisicing elit Ducimus exercitationem deserunt ",
-            texto2: "Lorem, ipsum dolor sit amet consectetur adipisicing elit Ducimus exercitationem deserunt ",
-            texto3: "Lorem, ipsum dolor sit amet consectetur adipisicing elit Ducimus exercitationem deserunt ",
+            texto1: "Durante 6 meses, me capacité en la Fundación Pescar para desarrollar habilidades blandas esenciales para el entorno laboral. Me enfoqué en gestionar el tiempo, controlar emociones, trabajar en equipo, diplomacia laboral, toma de decisiones, seguridad en mí mismo y espíritu emprendedor. Además, participé en proyectos de equipo para simular situaciones cotidianas del entorno corporativo, fortaleciendo así mis habilidades prácticas y mi adaptabilidad.",
             img1: imgPescar2,
             img2: imgPescar1,
             img3: imgPescar3,
@@ -39,13 +34,10 @@ export default function Trayecto() {
         },
         {
             Titulo: "Artech Capacitacion interna SAP ABAP",
-            subTitulo: "2 mese de preparacion",
-            TExto1: "Lorem, ipsum dolor sit amet consectetur adipisicing elit Ducimus exercitationem deserunt ",
-            texto2: "Lorem, ipsum dolor sit amet consectetur adipisicing elit Ducimus exercitationem deserunt ",
-            texto3: "Lorem, ipsum dolor sit amet consectetur adipisicing elit Ducimus exercitationem deserunt ",
+            texto1: "Durante dos meses, participé en la capacitación interna de la consultora Artech para convertirme en consultor técnico de SAP ABAP. Aprendí junto a profesionales experimentados, completando proyectos con esta tecnología líder en el mercado. Esta experiencia me equipó con habilidades sólidas para abordar desafíos empresariales complejos.",
             img1: imgSAP1,
             img2: imgSAP2,
-            img3: null,
+            img3: imgSAP3,
             imgG: GradienteNaranja
         },
     ]
@@ -71,13 +63,10 @@ export default function Trayecto() {
                                 className='z-0 row-start-1 row-span-3 col-start-1 col-span-3 w-full' />
                         </div>
 
-                        <div className='flex flex-row'>
+                        <div className='flex flex-row w-full self-center sm:w-[50%]'>
                             <div className="flex flex-col items-start gap-5 px-[5%]">
                                 <p className="text-white text-3xl text-center font-title self-start"> {data.Titulo} </p>
-                                <p className="text-white w-[80%] text-xl font-text self-start text-start"> {data.subTitulo} </p>
-                                <p className='text-white font-Text text-lg'><span className="text-primarioP">* </span> {data.TExto1} </p>
-                                <p className="text-white font-Text text-lg"><span className="text-primarioD">* </span> {data.texto2} </p>
-                                <p className="text-white font-Text text-lg"><span className="text-primarioW">* </span> {data.texto3} </p>
+                                <p className='text-white font-Text text-lg '><span className="text-primarioP">* </span> {data.texto1} </p>
                             </div>
                         </div>
                     </div>
