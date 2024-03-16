@@ -43,7 +43,7 @@ export default function Trayecto() {
     ]
 
     return (
-        <section className="gap-20 flex flex-col">
+        <section id='Trayectos' className="gap-20 flex flex-col">
             <article className="flex flex-col justify-center items-center">
                 <p className="font-text text-primarioD text-xl">Mi trayecto</p>
                 <p className="font-title text-6xl text-white text-center">¿Donde he estado?</p>

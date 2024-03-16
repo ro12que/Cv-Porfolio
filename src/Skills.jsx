@@ -47,7 +47,7 @@ export default function Skills() {
     ]
 
     return (
-        <section className="gap-20 flex flex-col">
+        <section id='Habilidades' className="gap-20 flex flex-col">
             <article className="flex flex-col justify-center items-center">
                 <p className="font-text text-primarioP text-xl">Mis habilidades</p>
                 <p className="font-title text-6xl text-white text-center">¿Como puedo ayudarte?</p>
@@ -67,22 +67,3 @@ export default function Skills() {
         </section>
     )
 }
-
-{/*
-        <section className="gap-20 flex flex-col">
-            <article className="flex flex-col justify-center items-center">
-                <p className="font-text text-primarioP text-xl">Mis habilidades</p>
-                <p className="font-title text-6xl text-white text-center">¿Como puedo ayudarte?</p>
-            </article>
-            <article className="flex flex-wrap  justify-center items gap-10">
-                {Habilidad.map((data, index) => (
-                    <div key={index} className="flex flex-col gap-5 p-3 items-center justify-evenly rounded-lg border-2 w-[300px] h-[500px] mx-[10px]">
-                        <p className="text-white text-3xl font-title"> {data.titulo} </p>
-                        <p className="text-white w-[80%] text-xl font-text"> {data.subTitulo} </p>
-                        <img src={data.img} alt=""
-                            className="object-contain w-[70%] rounded-lg" />
-                    </div>
-                ))}
-            </article>
-        </section>
-*/}

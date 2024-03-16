@@ -11,8 +11,8 @@ export default function Hero() {
         setMenuVisible(!menuVisible);
     }
     return (
-        <section className='bg-img flex flex-col gap-3 max-h-[1200px]'>
-            <nav className="h-[80px] flex items-center justify-between flex-wrap  p-4">
+        <section id='Hero' className='bg-img flex flex-col gap-3 max-h-[1200px]'>
+            <nav className="h-[80px] w-full flex items-center justify-between flex-wrap  p-4 fixed">
                 <div className="block sm:hidden ">
                     <button id='boton' onClick={toggleMenu} className="flex items-center px-3 py-2 text-white">
                         <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>
@@ -20,21 +20,21 @@ export default function Hero() {
                 </div>
                 <div id='menu' className={` w-3/4 block flex-grow sm:flex sm:items-evenly  ${menuVisible ? 'bg-black' : 'hidden'}`}>
                     <div className="text-sm sm:flex-grow">
-                        <a href="#" className="block mt-4 sm:inline-block sm:mt-0 text-white mr-4">
+                        <a href='Hero' className="block mt-4 sm:inline-block sm:mt-0 text-white mr-4">
                             Inicio
                         </a>
-                        <a href="#" className="block mt-4 sm:inline-block sm:mt-0 text-white mr-4">
+                        <a href="Proyectos" className="block mt-4 sm:inline-block sm:mt-0 text-white mr-4">
                             Proyectos
                         </a>
-                        <a href="#" className="block mt-4 sm:inline-block sm:mt-0 text-white mr-4">
+                        <a href="Trayectos" className="block mt-4 sm:inline-block sm:mt-0 text-white mr-4">
                             Trayecto
                         </a>
-                        <a href="#" className="block mt-4 sm:inline-block sm:mt-0 text-white mr-4">
+                        <a href="Habilidades" className="block mt-4 sm:inline-block sm:mt-0 text-white mr-4">
                             Habilidades
                         </a>
                     </div>
                 </div>
-                <a href="#" className="inline-block text-xs px-2 py-2 leading-none border rounded-lg text-white border-white mt-0">contactame</a>
+                <a href="Footer" className="inline-block text-lg px-2 py-2 leading-none border-4 border-primarioD rounded-lg bg-primarioD text-black mt-0">contactame</a>
             </nav>
 
 
@@ -42,9 +42,15 @@ export default function Hero() {
             <section className="flex flex-wrap h-[800px] items-center justify-center gap-10">
 
                 <div className="min-w-[300px] px-[5%] flex flex-col w-full gap-5 text-start sm:w-[45%]">
-                    <p className="font-Text text-xl text-terciarioP">Morel Roque</p>
-                    <p className="font-title text-6xl text-white">Hola! Soy tu nuevo programador web full stack</p>
-                    <p className="w-[60%] font-Text text-base text-white ">Diseño Web y Front End? Servidores y BackEnd? Analisis y reportes de datos? Better Call Roque</p>
+                    <p className="font-Text text-xl text-primarioP">
+                        Diseño Web, <span className='text-primarioC'>Desarrollo de Software</span> y <span className='text-primarioD'>Analisis de datos</span>
+                    </p>
+                    <p className="font-title text-6xl text-white">
+                        Hola! Soy <span className='text-primarioW'>Roque</span>  tu nuevo programador web full stack
+                    </p>
+                    <p className="w-[60%] font-Text text-base text-white ">
+                        Soy un joven <span className='text-primarioW'>entusiasta</span>  de la tecnología que sabe perfectamente cómo <span className='text-primarioD'>agregar valor</span> a tu empresa, idea o proyecto.
+                    </p>
                 </div>
 
                 <div className=" m-auto h-[64hv] w-[56%] sm:w-[20%]">

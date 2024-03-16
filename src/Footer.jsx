@@ -27,7 +27,7 @@ export default function Footer() {
     ]
 
     return (
-        <footer className="bg-img-footer min-h-[300px]">
+        <footer id='Footer' className="bg-img-footer min-h-[300px]">
             <div className="flex flex-row flex-wrap p-20 gap-20S  justify-around">
                 {Contacto.map((data, index) => (
                     <div className="flex flex-col gap-5 items-start p-5">

@@ -7,7 +7,7 @@ import Footer from './Footer'
 import Proyecto from './Proyectos'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <div className='flex flex-col gap-40 bg-black'>
+  <div className='flex flex-col gap-40 bg-[#0d0d0d]'>
     <Hero />
     <Proyecto />
     <Trayecto />
