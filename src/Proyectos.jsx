@@ -75,7 +75,7 @@ export default function Proyecto() {
                 {TRabajos.map((data, index) => (
                     <article key={index} className='grid grid-rows-[30%_40%_25%] grid-cols-3 gap-5 px-5 pt-5 max-w-[500px] h-[1200px] telf:h-[790px]'>
                         <img src={data.imgPrincipal} alt=""
-                            className='row-start-1 row-span-1 col-start-1 col-span-3 h-full object-cover self-center justify-self-center ' />
+                            className='row-start-1 row-span-1 col-start-1 col-span-3 h-full object-contain self-center justify-self-center ' />
                         <div className='row-start-2 row-span-1 col-start-1 col-span-3 flex flex-col gap-5 h-fit items-center mb-5'>
                             <p className='text-white text-6xl text-center font-title'> {data.titulo} </p>
                             <p className='text-white text-xl font-text text-center w-[80%]'> {data.subTitulo} </p>

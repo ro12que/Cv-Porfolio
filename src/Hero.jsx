@@ -39,7 +39,7 @@ export default function Hero() {
 
 
 
-            <section className="flex flex-wrap h-[800px] items-center justify-center gap-10">
+            <section className="flex flex-wrap h-[800px] items-center justify-center gap-10 mt-28">
 
                 <div className="min-w-[300px] px-[5%] flex flex-col w-full gap-5 text-start sm:w-[45%]">
                     <p className="font-Text text-xl text-primarioP">

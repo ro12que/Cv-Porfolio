@@ -52,13 +52,13 @@ export default function Trayecto() {
 
                 {Momentos.map((data, index) => (
                     <div key={index} className='flex flex-col gap-5 py-5 pl-[5%] sm:flex-row'>
-                        <div className='grid grid-cols-3 h-[80%] grid-rows-[50%_50%] w-[70%] max-w-[630px] self-center sm:w-[50%]'>
+                        <div className='grid grid-cols-3 h-[80%] grid-rows-[50%_50%] w-[90%] max-w-[630px] self-center sm:w-[50%]'>
                             <img src={data.img1} alt=""
-                                className='z-10 row-start-1 row-span-1 col-start-2 col-span-2 justify-self-end self-center object-contain rounded-lg' />
+                                className='z-10 row-start-1 row-span-1 col-start-1 col-span-2 justify-self-end self-center object-contain rounded-lg' />
                             <img src={data.img2} alt=""
-                                className='z-10 row-start-1 row-span-2 col-start-1 col-span-2 self-center object-contain rounded-lg' />
+                                className='z-10 row-start-1 row-span-2 col-start-2 col-span-2 self-center object-contain rounded-lg' />
                             <img src={data.img3} alt=""
-                                className='z-10 row-start-2 row-span-2 col-start-2 col-span-2 object-contain self-start justify-self-end rounded-lg' />
+                                className='z-10 row-start-2 row-span-2 col-start-1 col-span-2 object-contain self-start justify-self-end rounded-lg' />
                             <img src={data.imgG} alt=""
                                 className='z-0 row-start-1 row-span-3 col-start-1 col-span-3 w-full' />
                         </div>
