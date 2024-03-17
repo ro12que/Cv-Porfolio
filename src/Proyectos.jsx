@@ -19,8 +19,8 @@ export default function Proyecto() {
     const TRabajos = [
         {
             titulo: "Visualizador de Datos",
-            subTitulo: "Interfaz para usuarios donde se puede consultar data de una base de datos sql usando Nodejs y Typescript",
-            Descripcion: "Como parte de un equipo colaborativo, contribuí al desarrollo de una interfaz de usuario que permite a los usuarios consultar datos de una base de datos SQL de manera eficiente.",
+            subTitulo: "Interfaz amigable para usuarios donde pueden consultar una base de datos sql usando Nodejs y Typescript",
+            Descripcion: "Como parte de un equipo colaborativo, contribuí al desarrollo de una interfaz de usuario que les permite consultar una base de datos SQL de manera eficiente.",
             imgAd: WaramTeam,
             imgPrincipal: VDS,
             Tegnos: [
@@ -35,7 +35,7 @@ export default function Proyecto() {
         {
             titulo: "Comida Segura",
             subTitulo: "Buscador Web para personas con necesidades alimenticias diferentes",
-            Descripcion: "Participé en un equipo que desarrolló un buscador de comida para personas con dietas especiales. Utilizando una base de datos global, nuestra aplicación permite a los usuarios filtrar opciones de comida de manera personalizada según sus necesidades dietéticas únicas.",
+            Descripcion: "Participé en un equipo que desarrolló un buscador de comida para personas con dietas especificas. Utilizando una base de datos global, nuestra aplicación permite a los usuarios filtrar opciones de comida de manera personalizada según sus necesidades dietéticas.",
             imgAd: ArtechTeam,
             imgPrincipal: ComidaSegura,
             Tegnos: [
@@ -48,7 +48,7 @@ export default function Proyecto() {
         },
         {
             titulo: "Waram StartUp LandingPage",
-            subTitulo: "Land Page para Startup de servicios it",
+            subTitulo: "Landing Page para Startup de servicios it",
             Descripcion: "Participé en la creación de una Landing Page para una startup de servicios IT con un estilo creativo y moderno. Nuestro objetivo fue diseñar una página web impactante y funcional que reflejara la innovación y el enfoque revolucionario de la empresa.",
             imgAd: WaramTeam,
             imgPrincipal: Waram,
@@ -73,7 +73,7 @@ export default function Proyecto() {
             <div className='flex flex-wrap gap-20 justify-center'>
 
                 {TRabajos.map((data, index) => (
-                    <article key={index} className='grid grid-rows-[30%_40%_25%] grid-cols-3 gap-5 px-5 pt-5 max-w-[500px] h-[1200px] telf:h-[790px]'>
+                    <article key={index} className='grid grid-rows-[30%_40%_25%] grid-cols-3 gap-5 px-5 pt-5 max-w-[500px] h-[1050px] border-b-4 border-t-4 border-primarioD telf:h-[790px]'>
                         <img src={data.imgPrincipal} alt=""
                             className='row-start-1 row-span-1 col-start-1 col-span-3 h-full object-contain self-center justify-self-center ' />
                         <div className='row-start-2 row-span-1 col-start-1 col-span-3 flex flex-col gap-5 h-fit items-center mb-5'>
