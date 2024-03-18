@@ -30,7 +30,7 @@ export default function Footer() {
         <footer id='Footer' className="bg-img-footer min-h-[300px]">
             <div className="flex flex-row flex-wrap p-20 gap-20 justify-around">
                 {Contacto.map((data, index) => (
-                    <div className="flex flex-col gap-5 items-start p-5">
+                    <div key={index} className="flex flex-col gap-5 items-start p-5">
                         <p className='font-subTitle text-3xl m-auto'> {data.titulo} </p>
                         <a className=' font-Text text-xl m-auto text-center'
                             href={data.primerLink}> {data.primero} </a>

@@ -14,6 +14,8 @@ import Tegnoreact from './assets/icons-Tegnologias/icon-react.svg'
 import Tegnotailwind from './assets/icons-Tegnologias/icon-tailwind.svg'
 import Tegnovite from './assets/icons-Tegnologias/icon-vite.svg'
 
+import { motion } from "framer-motion"
+
 export default function Proyecto() {
 
     const TRabajos = [
@@ -65,7 +67,7 @@ export default function Proyecto() {
 
     return (
 
-        <section id='Proyectos' className='gap-20 flex flex-col items-center'>
+        <section id='Proyectos' className=' gap-20 flex flex-col items-center'>
             <article className="flex flex-col items-center">
                 <p className="font-text text-primarioW text-xl">Mis proyectos</p>
                 <p className="font-title text-6xl text-white text-center max-w-[80%]">Creo soluciones y las transformo en codigo</p>
@@ -73,7 +75,11 @@ export default function Proyecto() {
             <div className='flex flex-wrap gap-20 justify-center'>
 
                 {TRabajos.map((data, index) => (
-                    <article key={index} className='grid grid-rows-[30%_40%_25%] grid-cols-3 gap-5 px-5 pt-5 max-w-[500px] h-[1050px] border-b-4 border-t-4 border-primarioD telf:h-[790px]'>
+                    <motion.section
+                        initial={{ opacity: 0, }}
+                        whileInView={{ opacity: 1, }}
+                        transition={{ duration: 1.5, ease: "easeOut" }}
+                        key={index} className='grid grid-rows-[30%_40%_25%] grid-cols-3 gap-5 px-5 pt-5 max-w-[500px] h-[1050px] border-b-4 border-t-4 border-primarioD telf:h-[790px]'>
                         <img src={data.imgPrincipal} alt=""
                             className='row-start-1 row-span-1 col-start-1 col-span-3 h-full object-contain self-center justify-self-center ' />
                         <div className='row-start-2 row-span-1 col-start-1 col-span-3 flex flex-col gap-5 h-fit items-center mb-5'>
@@ -89,7 +95,7 @@ export default function Proyecto() {
                                     className='w-[20%]' />
                             ))}
                         </div>
-                    </article>
+                    </motion.section>
                 ))}
             </div>
         </section>

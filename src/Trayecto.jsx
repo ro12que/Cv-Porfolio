@@ -12,6 +12,8 @@ import GradienteVioleta from './assets/img-Trayectoria/Gradient-Violeta.png'
 import GradienteNaranja from './assets/img-Trayectoria/Gradient-Naranja.png'
 import GradienteVerde from './assets/img-Trayectoria/Gradient-Verde.png'
 
+import { motion } from "framer-motion"
+
 export default function Trayecto() {
 
     const Momentos = [
@@ -49,26 +51,35 @@ export default function Trayecto() {
                 <p className="font-title text-6xl text-white text-center">¿Donde he estado?</p>
             </article>
             <article className="flex flex-col justify-center items-center gap-32">
-
                 {Momentos.map((data, index) => (
                     <div key={index} className='flex flex-col gap-5 py-5 pl-[5%] sm:flex-row'>
-                        <div className='grid grid-cols-3 h-[80%] grid-rows-[50%_50%] w-[90%] max-w-[630px] self-center sm:w-[50%]'>
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 1.5, ease: "easeOut" }}
+                            className='grid grid-cols-3 h-[80%] grid-rows-[50%_50%] w-[90%] max-w-[630px] self-center sm:w-[50%]'>
                             <img src={data.img1} alt=""
                                 className='z-10 row-start-1 row-span-1 col-start-1 col-span-2 justify-self-end self-center object-contain rounded-lg' />
                             <img src={data.img2} alt=""
                                 className='z-10 row-start-1 row-span-2 col-start-2 col-span-2 self-center object-contain rounded-lg' />
                             <img src={data.img3} alt=""
                                 className='z-10 row-start-2 row-span-2 col-start-1 col-span-2 object-contain self-start justify-self-end rounded-lg' />
-                            <img src={data.imgG} alt=""
-                                className='z-0 row-start-1 row-span-3 col-start-1 col-span-3 w-full' />
-                        </div>
 
-                        <div className='flex flex-row w-full self-center sm:w-[50%]'>
+                            <span className='col-start-1 col-span-3 row-start-1 row-span-2 justify-self-center self-center z-0 h-3/4 w-3/4 rounded-full bg-primarioP blur-3xl hover:bg-primarioD'>
+
+                            </span>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, }}
+                            whileInView={{ opacity: 1, }}
+                            transition={{ duration: 1, ease: "easeOut" }}
+                            className='flex flex-row w-full self-center sm:w-[50%]'>
                             <div className="flex flex-col items-start gap-5 px-[5%]">
                                 <p className="text-white text-3xl text-center font-title self-start"> {data.Titulo} </p>
                                 <p className='text-white font-Text text-lg '><span className="text-primarioP">* </span> {data.texto1} </p>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 ))}
 

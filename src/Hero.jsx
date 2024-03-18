@@ -6,6 +6,8 @@ import close from './assets/img-Hero/x-icon.svg'
 import './index.css'
 import React, { useState } from 'react';
 
+import { motion } from "framer-motion"
+
 export default function Hero() {
 
     const Links = [
@@ -20,7 +22,11 @@ export default function Hero() {
     return (
         <section id='Hero' className='bg-img flex flex-col gap-3 max-h-[1200px]'>
 
-            <nav className='fixed top-0 left-0 w-full h-[80px]'>
+            <motion.nav
+                initial={{ opacity: 0, top: -50 }}
+                animate={{ opacity: 1, top: 0, transition: { duration: 1.5, ease: "easeOut" } }}
+                options={{ root: null, threshold: 0.5 }}
+                className='fixed top-0 left-0 w-full h-[80px]'>
                 <div className='flex items-center justify-between py-4 px-7 md:px-10'>
 
 
@@ -47,12 +53,16 @@ export default function Hero() {
                     </a>
 
                 </div>
-            </nav>
+            </motion.nav>
 
 
-            <section className="flex flex-wrap h-[800px] items-center justify-center gap-10 mt-28">
+            <div className="flex flex-wrap h-[800px] items-center justify-center gap-10 mt-28">
 
-                <div className="min-w-[300px] px-[5%] flex flex-col w-full gap-5 text-start sm:w-[45%]">
+                <motion.div
+                    initial={{ opacity: 0, top: -50 }}
+                    animate={{ opacity: 1, top: 0, transition: { duration: 1.5, ease: "easeOut" } }}
+                    options={{ root: null, threshold: 0.5 }}
+                    className="min-w-[300px] px-[5%] flex flex-col w-full gap-5 text-start sm:w-[45%]">
                     <p className="font-Text text-xl text-primarioP">
                         Diseño Web, <span className='text-primarioC'>Desarrollo de Software</span> y <span className='text-primarioD'>Analisis de datos</span>
                     </p>
@@ -62,19 +72,32 @@ export default function Hero() {
                     <p className="w-[60%] font-Text text-base text-white ">
                         Soy un joven <span className='text-primarioW'>entusiasta</span>  de la tecnología que sabe perfectamente cómo <span className='text-primarioD'>agregar valor</span> a tu empresa, idea o proyecto.
                     </p>
-                </div>
+                </motion.div>
 
-                <div className=" m-auto h-[64hv] w-[56%] sm:w-[20%]">
+                <motion.div
+                    initial={{ opacity: 0, top: -50 }}
+                    animate={{ opacity: 1, top: 0, transition: { duration: 1.5, ease: "easeOut" } }}
+                    options={{ root: null, threshold: 0.5 }}
+                    whileHover={{ scale: 1.1 }}
+                    drag
+                    dragConstraints={{
+                        top: -50,
+                        left: -50,
+                        right: 50,
+                        bottom: 50,
+                    }}
+                    className=" m-auto h-[64hv] w-[56%] sm:w-[20%]">
+
                     <div className='imgPersonal grid grid-rows-[1fr_4fr] grid-cols-[1fr_1fr] z-20 self-end border-4 rounded-lg'>
+                        <span className='h-full w-full row-start-1 row-span-2 col-start-1 col-span-2 z-40'></span>
                         <img src={HeroPersonal} alt=""
                             className=' object-contain z-30 row-start-2 row-span-2 col-start-1 col-span-2 self-end' />
-
                         <img src={HeroDeatil} alt=""
                             className='z-20 w-full object-contain row-start-1 row-span-2 col-start-1 col-span-2 self-center justify-self-center' />
                     </div>
-                </div>
+                </motion.div>
 
-            </section>
+            </div>
         </section >
     )
 }
