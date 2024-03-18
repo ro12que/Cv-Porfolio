@@ -1,13 +1,10 @@
 "use client"
-import { motion } from "framer-motion"
 import { useEffect, useState } from "react";
 import { loadSlim } from "@tsparticles/slim";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 
 export default function Stela() {
-
     const [init, setInit] = useState(false);
-
     useEffect(() => {
         initParticlesEngine(async (engine) => {
             await loadSlim(engine);
@@ -15,7 +12,6 @@ export default function Stela() {
             setInit(true);
         });
     }, []);
-
     return (
         init &&
         <div className="w-[0px]">
@@ -82,32 +78,9 @@ export default function Stela() {
                         },
                     },
                     detectRetina: true,
-
                 }}
-
             />
         </div>
-
-        /*     <motion.span
-                 initial={{ opacity: 0, top: -50 }}
-                 animate={{
-                     opacity: 1,
-                     top: positionArray,
-                     scale: [1, 1.5, 1, 1.5, 1],
-                     rotate: [180, 180, 180, 180, 180],
-                     borderRadius: ["0%", "0%", "50%", "50%", "0%"],
-                     backgroundColor: ["#ba72e2", "#3eb29a", "#73bdfd", "#fb896f", "#ba72e2"],
-                 }}
-                 transition={{
-                     duration: 10,
-                     ease: "easeInOut",
-                     times: [0, 0.2, 0.5, 0.8, 1],
-                     repeat: Infinity,
-                     repeatDelay: 1
-                 }}
-                 className='absolute hidden top-10 right-1/2 w-20 h-20 blur-xl bg-primarioP sm:block'>
-             </motion.span>*/
-
     )
 
 }

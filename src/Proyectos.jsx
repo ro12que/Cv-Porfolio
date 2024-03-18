@@ -12,8 +12,6 @@ import Tegnosql from './assets/icons-Tegnologias/icon-mysql.svg'
 import Tegnonode from './assets/icons-Tegnologias/icon-nodejs.svg'
 import Tegnoreact from './assets/icons-Tegnologias/icon-react.svg'
 import Tegnotailwind from './assets/icons-Tegnologias/icon-tailwind.svg'
-import Tegnovite from './assets/icons-Tegnologias/icon-vite.svg'
-
 import { motion } from "framer-motion"
 
 export default function Proyecto() {
@@ -32,7 +30,6 @@ export default function Proyecto() {
                 Tegnonet,
                 Tegnosql
             ]
-
         },
         {
             titulo: "Comida Segura",
@@ -46,7 +43,6 @@ export default function Proyecto() {
                 Tegnonode,
                 Tegnocss,
             ]
-
         },
         {
             titulo: "Waram StartUp LandingPage",
@@ -60,20 +56,16 @@ export default function Proyecto() {
                 Tegnojs,
                 Tegnocss,
             ]
-
         },
 
     ]
-
     return (
-
         <section id='Proyectos' className=' gap-20 flex flex-col items-center'>
             <article className="flex flex-col items-center">
                 <p className="font-text text-primarioW text-xl">Mis proyectos</p>
                 <p className="font-title text-6xl text-white text-center max-w-[80%]">Creo soluciones y las transformo en codigo</p>
             </article>
             <div className='flex flex-wrap gap-20 justify-center'>
-
                 {TRabajos.map((data, index) => (
                     <motion.section
                         initial={{ opacity: 0, }}

@@ -1,7 +1,4 @@
-import BgFooter from './assets/img-Footer/BG-footer.png'
-
 export default function Footer() {
-
     const Contacto = [
         {
             titulo: "Redes",
@@ -25,7 +22,6 @@ export default function Footer() {
             segundolink: "https://www.artech-consulting.com.ar/"
         },
     ]
-
     return (
         <footer id='Footer' className="bg-img-footer min-h-[300px]">
             <div className="flex flex-row flex-wrap p-20 gap-20 justify-around">

@@ -5,10 +5,7 @@ import UXUI from './assets/img-Skills/img-uxui.png'
 import MERN from './assets/img-Skills/img-Merm.png'
 import SAP from './assets/img-Skills/img-SAP.png'
 
-import { motion } from "framer-motion"
-
 export default function Skills() {
-
     const Habilidad = [
         {
             titulo: "Trabajo en equipo",
@@ -55,7 +52,7 @@ export default function Skills() {
             </article>
             <article className="flex flex-wrap  justify-center items gap-10">
                 {Habilidad.map((data, index) => (
-                    <motion.div
+                    <div
                         key={index} className="grid grid-cols-3 grid-rows-[10%_10%_40%_30%] gap-5 p-3 py-5 items-center min-w-[300px] w-[80%] h-[700px] min-h-[700px] mx-[10px] telf:h-[500px] md:h-[900px] lg:h-[700px] sm:w-[50%] md:w-[30%]">
                         <img src={data.img} alt=""
                             className="z-10 object-contain w-[80%] rounded-lg bg-primarioP col-start-2 col-span-1 row-start-1 row-span-2 self-center sm:w-[90%]" />
@@ -63,7 +60,7 @@ export default function Skills() {
                             <p className="text-white text-5xl font-title text-center "> {data.titulo} </p>
                             <p className="text-white w-[80%] text-lg font-text h-full m-auto"> {data.subTitulo} </p>
                         </div>
-                    </motion.div>
+                    </div>
                 ))}
             </article>
         </section>

@@ -95,10 +95,8 @@ export default function Trayecto() {
                                     repeatDelay: 1
                                 }}
                                 className='col-start-1 col-span-3 row-start-1 row-span-2 justify-self-center self-center z-0 h-1/2 w-1/2 rounded-full bg-primarioP blur-3xl'>
-
                             </motion.span>
                         </motion.div>
-
                         <motion.div
                             initial={{ opacity: 0, }}
                             whileInView={{ opacity: 1, }}
