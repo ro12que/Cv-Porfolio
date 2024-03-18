@@ -20,8 +20,7 @@ export default function Hero() {
     let [open, setOpen] = useState(false);
 
     return (
-        <section id='Hero' className='bg-img flex flex-col gap-3 max-h-[1200px]'>
-
+        <section id='Hero' className='flex flex-col gap-3 max-h-[1200px]'>
             <motion.nav
                 initial={{ opacity: 0, top: -50 }}
                 animate={{ opacity: 1, top: 0, transition: { duration: 1.5, ease: "easeOut" } }}
@@ -55,12 +54,11 @@ export default function Hero() {
                 </div>
             </motion.nav>
 
-
             <div className="flex flex-wrap h-[800px] items-center justify-center gap-10 mt-28">
 
                 <motion.div
-                    initial={{ opacity: 0, top: -50 }}
-                    animate={{ opacity: 1, top: 0, transition: { duration: 1.5, ease: "easeOut" } }}
+                    initial={{ opacity: 0, }}
+                    animate={{ opacity: 1, transition: { duration: 1.5, ease: "easeOut" } }}
                     options={{ root: null, threshold: 0.5 }}
                     className="min-w-[300px] px-[5%] flex flex-col w-full gap-5 text-start sm:w-[45%]">
                     <p className="font-Text text-xl text-primarioP">
@@ -73,20 +71,13 @@ export default function Hero() {
                         Soy un joven <span className='text-primarioW'>entusiasta</span>  de la tecnología que sabe perfectamente cómo <span className='text-primarioD'>agregar valor</span> a tu empresa, idea o proyecto.
                     </p>
                 </motion.div>
-
                 <motion.div
-                    initial={{ opacity: 0, top: -50 }}
-                    animate={{ opacity: 1, top: 0, transition: { duration: 1.5, ease: "easeOut" } }}
+                    initial={{ opacity: 0, }}
+                    animate={{ opacity: 1, transition: { duration: 1.5, ease: "easeOut" } }}
                     options={{ root: null, threshold: 0.5 }}
                     whileHover={{ scale: 1.1 }}
-                    drag
-                    dragConstraints={{
-                        top: -50,
-                        left: -50,
-                        right: 50,
-                        bottom: 50,
-                    }}
                     className=" m-auto h-[64hv] w-[56%] sm:w-[20%]">
+
 
                     <div className='imgPersonal grid grid-rows-[1fr_4fr] grid-cols-[1fr_1fr] z-20 self-end border-4 rounded-lg'>
                         <span className='h-full w-full row-start-1 row-span-2 col-start-1 col-span-2 z-40'></span>
@@ -101,30 +92,3 @@ export default function Hero() {
         </section >
     )
 }
-
-{/*
-            <nav className="h-[80px] w-full flex items-center justify-between flex-wrap  p-4 fixed">
-                <div className="block sm:hidden ">
-                    <button id='boton' onClick={toggleMenu} className="flex items-center px-3 py-2 text-white">
-                        <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>
-                    </button>
-                </div>
-                <div id='menu' className={` w-1/2 block flex-grow justify-start sm:flex sm:items-evenly  ${menuVisible ? 'bg-[#0d0d0d]' : 'hidden'}`}>
-                    <div className="text-sm sm:flex-grow">
-                        <a href='Hero' className="block mt-4 sm:inline-block sm:mt-0 text-white mr-4">
-                            Inicio
-                        </a>
-                        <a href="Proyectos" className="block mt-4 sm:inline-block sm:mt-0 text-white mr-4">
-                            Proyectos
-                        </a>
-                        <a href="Trayectos" className="block mt-4 sm:inline-block sm:mt-0 text-white mr-4">
-                            Trayecto
-                        </a>
-                        <a href="Habilidades" className="block mt-4 sm:inline-block sm:mt-0 text-white mr-4">
-                            Habilidades
-                        </a>
-                    </div>
-                </div>
-                <a href="Footer" className="inline-block text-lg px-2 py-2 leading-none border-4 border-primarioD rounded-lg bg-primarioD text-black mt-0">contactame</a>
-            </nav>
-*/}

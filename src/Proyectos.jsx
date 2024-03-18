@@ -80,7 +80,15 @@ export default function Proyecto() {
                         whileInView={{ opacity: 1, }}
                         transition={{ duration: 1.5, ease: "easeOut" }}
                         key={index} className='grid grid-rows-[30%_40%_25%] grid-cols-3 gap-5 px-5 pt-5 max-w-[500px] h-[1050px] border-b-4 border-t-4 border-primarioD telf:h-[790px]'>
-                        <img src={data.imgPrincipal} alt=""
+                        <motion.img
+                            drag
+                            dragConstraints={{
+                                top: -50,
+                                left: -50,
+                                right: 50,
+                                bottom: 50,
+                            }}
+                            src={data.imgPrincipal} alt=""
                             className='row-start-1 row-span-1 col-start-1 col-span-3 h-full object-contain self-center justify-self-center ' />
                         <div className='row-start-2 row-span-1 col-start-1 col-span-3 flex flex-col gap-5 h-fit items-center mb-5'>
                             <p className='text-white text-6xl text-center font-title'> {data.titulo} </p>

@@ -7,11 +7,6 @@
     box-sizing: border-box;
 }
 
-.bg-img {
-    background-image: url('./assets/img-Hero/BG-Hero.png');
-    background-size: cover;
-    background-position: center top;
-}
 
 .imgPersonal {
     border: 4px solid;

@@ -58,16 +58,53 @@ export default function Trayecto() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 1.5, ease: "easeOut" }}
                             className='grid grid-cols-3 h-[80%] grid-rows-[50%_50%] w-[90%] max-w-[630px] self-center sm:w-[50%]'>
-                            <img src={data.img1} alt=""
+                            <motion.img
+                                drag
+                                dragConstraints={{
+                                    top: -50,
+                                    left: -50,
+                                    right: 50,
+                                    bottom: 50,
+                                }}
+                                src={data.img1} alt=""
                                 className='z-10 row-start-1 row-span-1 col-start-1 col-span-2 justify-self-end self-center object-contain rounded-lg' />
-                            <img src={data.img2} alt=""
+                            <motion.img
+                                drag
+                                dragConstraints={{
+                                    top: -50,
+                                    left: -50,
+                                    right: 50,
+                                    bottom: 50,
+                                }}
+                                src={data.img2} alt=""
                                 className='z-10 row-start-1 row-span-2 col-start-2 col-span-2 self-center object-contain rounded-lg' />
-                            <img src={data.img3} alt=""
+                            <motion.img
+                                drag
+                                dragConstraints={{
+                                    top: -50,
+                                    left: -50,
+                                    right: 50,
+                                    bottom: 50,
+                                }}
+                                src={data.img3} alt=""
                                 className='z-10 row-start-2 row-span-2 col-start-1 col-span-2 object-contain self-start justify-self-end rounded-lg' />
 
-                            <span className='col-start-1 col-span-3 row-start-1 row-span-2 justify-self-center self-center z-0 h-3/4 w-3/4 rounded-full bg-primarioP blur-3xl hover:bg-primarioD'>
+                            <motion.span
+                                animate={{
+                                    scale: [1, 1.5, 1.5, 1, 1],
+                                    rotate: [0, 0, 180, 180, 0],
+                                    borderRadius: ["0%", "0%", "50%", "50%", "0%"]
+                                }}
+                                transition={{
+                                    duration: 10,
+                                    ease: "easeInOut",
+                                    times: [0, 0.2, 0.5, 0.8, 1],
+                                    repeat: Infinity,
+                                    repeatDelay: 1
+                                }}
+                                className='col-start-1 col-span-3 row-start-1 row-span-2 justify-self-center self-center z-0 h-1/2 w-1/2 rounded-full bg-primarioP blur-3xl'>
 
-                            </span>
+                            </motion.span>
                         </motion.div>
 
                         <motion.div
