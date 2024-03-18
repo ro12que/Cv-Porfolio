@@ -7,10 +7,6 @@ import imgPescar3 from './assets/img-Trayectoria/Personal-Pescar.png'
 import imgSAP1 from './assets/img-Trayectoria/SAP-Clase.jpg'
 import imgSAP2 from './assets/img-Trayectoria/SAP-Grupo.jpg'
 import imgSAP3 from './assets/img-Trayectoria/SAP-Detalle.jpg'
-import GradienteCeleste from './assets/img-Trayectoria/Gradient-Celeste.png'
-import GradienteVioleta from './assets/img-Trayectoria/Gradient-Violeta.png'
-import GradienteNaranja from './assets/img-Trayectoria/Gradient-Naranja.png'
-import GradienteVerde from './assets/img-Trayectoria/Gradient-Verde.png'
 
 import { motion } from "framer-motion"
 
@@ -23,7 +19,6 @@ export default function Trayecto() {
             img1: imgArtech1,
             img2: imgArtech2,
             img3: imgArtech3,
-            imgG: GradienteCeleste
         },
         {
             Titulo: "Fundacion Pescar Capacitacion para el Trabajo",
@@ -31,8 +26,6 @@ export default function Trayecto() {
             img1: imgPescar2,
             img2: imgPescar1,
             img3: imgPescar3,
-            imgG: GradienteVioleta
-
         },
         {
             Titulo: "Artech Capacitacion interna SAP ABAP",
@@ -40,7 +33,6 @@ export default function Trayecto() {
             img1: imgSAP1,
             img2: imgSAP2,
             img3: imgSAP3,
-            imgG: GradienteNaranja
         },
     ]
 

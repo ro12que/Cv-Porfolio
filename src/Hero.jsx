@@ -1,5 +1,4 @@
 import HeroPersonal from './assets/img-Hero/Hero-Personal.png'
-import HeroBg from './assets/img-Hero/BG-Hero.png'
 import HeroDeatil from './assets/img-Hero/Hero-Detail.gif'
 import Menu from './assets/img-Hero/menu-Icon.svg'
 import close from './assets/img-Hero/x-icon.svg'
